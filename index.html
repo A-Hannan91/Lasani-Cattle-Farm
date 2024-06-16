@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lasani Cattle Farm</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #1e8449;
+        color: white;
+      }
+      header img {
+        height: 50px;
+      }
+      nav a {
+        color: white;
+        margin-left: 20px;
+        text-decoration: none;
+      }
+      .hero {
+        height: 100vh;
+        background: url("./Images/Hero_magic-1.jpeg") no-repeat center
+          center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #d4efdf;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 3em;
+      }
+      .about,
+      .offer,
+      .footer {
+        padding: 50px;
+        text-align: center;
+      }
+      .about img {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px;
+      }
+      .about p {
+        max-width: 800px;
+        margin: 0 auto 30px;
+        font-size: 1.2em;
+      }
+      .offer form {
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      .offer form input,
+      .offer form textarea {
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 1em;
+        border: 1px solid #145a32;
+        border-radius: 5px;
+      }
+      .offer form button {
+        padding: 10px;
+        font-size: 1em;
+        background-color: #145a32;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .footer {
+        background-color: #145a32;
+        color: white;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="./Images/Lasani Logo.png" alt="Lasani Cattle Farm Logo" />
+      <nav>
+        <a href="#about">About</a>
+        <a href="#offer">Make an Offer</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Elevating Karachi's Cattle Experience</h1>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About Us</h2>
+      <p>
+        We are proud to offer a wide variety of organically raised cows and
+        bulls. Our livestock is known for its exceptional quality and health.
+        The price range for our animals starts from Rs. 350,000 PKR to Rs.
+        950,000 PKR, catering to various budget needs. Our cows weigh between
+        160kg to 360kg, providing a range of options to suit your requirements.
+        Additionally, the age of our cows and buffaloes ranges from 2 years to 6
+        years, ensuring that you get well-matured livestock. Are you interested
+        in making a purchase?
+      </p>
+      <div>
+        <img src="./Images/Cow-1.jpeg" alt="Cow Image 1" />
+        <img src="./Images/Bail-1.jpg" alt="Bull Image 2" />
+        <img src="./Images/Cow-2.jpg" alt="Cow Image 1" />
+        <img src="./Images/Bail-2.jpeg" alt="Bull Image 2" />
+      </div>
+    </section>
+
+    <section id="offer" class="offer">
+      <h2>Make an Offer</h2>
+      <form>
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input
+          type="text"
+          name="contact"
+          placeholder="Contact Number"
+          required
+        />
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="Your Offer"
+          required
+        ></textarea>
+        <button type="submit">Make Offer Now</button>
+      </form>
+    </section>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      chat-icon="https:&#x2F;&#x2F;firebasestorage.googleapis.com&#x2F;v0&#x2F;b&#x2F;image-icons.appspot.com&#x2F;o&#x2F;Lasani%20Logo.png?alt=media&amptoken=963f0f09-e286-422a-890b-f7de49704218"
+      intent="WELCOME"
+      chat-title="LasaniCattleBot"
+      agent-id="3d988897-a9b6-4fd5-8626-95ad73aa0eeb"
+      language-code="en"
+    ></df-messenger>
+    <style>
+      df-messenger {
+        --df-messenger-bot-message: #d2e1d1;
+        --df-messenger-button-titlebar-color: rgb(142, 213, 142);
+        --df-messenger-chat-background-color: rgba(128, 189, 128, 0.507);
+        --df-messenger-font-color: green;
+        --df-messenger-send-icon: #ffffff;
+        --df-messenger-user-message: #b2e2af;
+      }
+    </style>
+    <footer class="footer">
+      <p>&copy; 2024 Lasani Cattle Farm. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
