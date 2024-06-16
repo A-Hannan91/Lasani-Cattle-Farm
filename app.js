@@ -74,7 +74,7 @@ webApp.post("/dialogflow", async (req, res) => {
     console.log(`intent  =>  Cow-Purchase - yes`);
 
     const accountSid = "AC4dcacf54f528a27d05a84b450ba99872";
-    const authToken = "0d6f82b8191c5cb68a9c07ab15063984";
+    const authToken = "";
     const client = require("twilio")(accountSid, authToken);
 
     agent.add("We have received all your details, please check your email");
